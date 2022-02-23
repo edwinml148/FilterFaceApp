@@ -17,7 +17,7 @@ FilterFaceApp es una WebApp de vision artificial en tiempo real desarrollada en 
 
 Streamlit es una biblioteca de Python de código abierto que facilita la creación de hermosas aplicaciones web personalizadas para el machine learning y la ciencia de datos.
 
-![Logo Streamlit](streamlit2.png)
+![Logo Streamlit](streamlit3.png)
 
 
 

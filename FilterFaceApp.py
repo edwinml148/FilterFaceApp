@@ -21,11 +21,9 @@ class VideoDeteccionCaraOjo:
         for (x, y, w, h) in faces:
             cv2.rectangle(img, (x,y), (x+w,y+h), (255,0,0), 2)
             gray_cara = cv2.cvtColor(img[y:y+h,x:x+w], cv2.COLOR_BGR2GRAY)
-            # Para la deteccion de los ojos se mantiene la proporcion entre la cara y los ojos
-            max_face = int(max(w, h)/4)
+            max_face = int(max(w, h)/4) # Para la deteccion de los ojos se mantiene la proporcion entre la cara y los ojos aprox el 25%
             eyes = eyes_detector.detectMultiScale(gray_cara, scaleFactor=1.1, minNeighbors=6 , minSize=(max_face,max_face), maxSize=(max_face+10,max_face+10))
-            # Solo cuando se detecte dos ojos se dibujara.
-            if ( len(eyes) == 2 ):
+            if ( len(eyes) == 2 ):# Solo cuando se detecte dos ojos se dibujara.
                 for (x_e, y_e, w_e, h_e) in eyes:
                     cv2.rectangle(img[y:y+h,x:x+w], (x_e,y_e), (x_e+w_e,y_e+h_e), (0,255,0), 2)
 
@@ -41,7 +39,7 @@ class VideoBlurring:
         img = frame.to_ndarray(format="bgr24")
         gray = cv2.cvtColor(img , cv2.COLOR_BGR2GRAY)
         faces = face_detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=6 , minSize=(self.threshold1,self.threshold1), maxSize=(self.threshold1+100,self.threshold1+100))
-        print(faces)
+        
         for (x, y, w, h) in faces:
             kernel = np.ones((self.kernel,self.kernel),np.float32)/(self.kernel*self.kernel)
             img[y:y+h,x:x+w] = cv2.filter2D(img[y:y+h,x:x+w],-1,kernel)
@@ -60,7 +58,6 @@ class VideoModificacionFace:
         gray = cv2.cvtColor(img , cv2.COLOR_BGR2GRAY)
         faces = face_detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=6 , minSize=(self.threshold1,self.threshold1), maxSize=(self.threshold1+100,self.threshold1+100))
 
-
         for (x, y, w, h) in faces:
             b = cv2.resize( self.imagen , dsize=(h,w), interpolation=cv2.INTER_CUBIC)
             img[y:y+h,x:x+w] = b
@@ -73,7 +70,6 @@ def main():
     with open('style.css') as f:
         st.sidebar.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-
     st.title('Crea tu propio filtro personalizado !!!')
     st.write('FilterFaceApp es un WebApp con el objetivo de practicar tus conocimientos de procesamiento de imagenes creando tus propios filtros sobre **rostros** e incorporarlo a la WebApp.')
     st.sidebar.header('Filtros personalizados')
@@ -81,15 +77,13 @@ def main():
     
     if ( option ==  'Deteccion de caras y ojos'):
         
-        #ctx = webrtc_streamer(key="example", video_transformer_factory=VideoDeteccionCaraOjo)
         ctx = webrtc_streamer(
             key="example",
             video_processor_factory=VideoDeteccionCaraOjo,
-            rtc_configuration={ # Add this line
+            rtc_configuration={ 
                 "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
             }
         )
-        #ctx = webrtc_streamer(key="example", video_processor_factory=VideoDeteccionCaraOjo)
 
         if ctx.video_processor:
             ctx.video_processor.threshold1 = st.slider("Minimo tamaño de la cara", 100, 200, 150)
@@ -97,15 +91,14 @@ def main():
         st.write('*Minimo tamaño de la cara* : Indica la longitud en pixels minima de la cara detectada , a menor valor se podra detectar rostros mas lejos de la camara')
     
     if ( option ==  'Blurring'):
-        #ctx = webrtc_streamer(key="example", video_transformer_factory=VideoBlurring)
+        
         ctx = webrtc_streamer(
             key="example",
             video_processor_factory=VideoBlurring,
-            rtc_configuration={ # Add this line
+            rtc_configuration={
                 "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
             }
         )
-        #ctx = webrtc_streamer(key="example", video_processor_factory=VideoBlurring)
 
         if ctx.video_processor:
             ctx.video_processor.threshold1 = st.slider("Minimo tamaño de la cara", 100, 200, 150)
@@ -122,8 +115,6 @@ def main():
             file_bytes = np.asarray(bytearray(file_uploader.read()), dtype=np.uint8)
             opencv_image = cv2.imdecode(file_bytes, 1)
             
-            #ctx = webrtc_streamer(key="example", video_transformer_factory=VideoModificacionFace)
-            #ctx = webrtc_streamer(key="example", video_processor_factory=VideoModificacionFace)
             ctx = webrtc_streamer(
                 key="example",
                 video_processor_factory=VideoModificacionFace,
@@ -131,8 +122,6 @@ def main():
                     "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
                 }
             )
-
-            
 
             if ctx.video_processor:
                 ctx.video_processor.threshold1 = st.slider("Minimo tamaño de la cara", 100, 200, 150)

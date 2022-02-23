@@ -13,25 +13,58 @@
 
 ## 1. Motivacion
 
-FilterFaceApp es una WebApp de vision artificial en tiempo real desarrollada en [ Streamlit ](https://streamlit.io/) con el objetivo crear tus propios filtros personalizados, estos pueden ser aplicados directamente a todo el video o espeficiamente a caras detectadas.
 
-Streamlit es una biblioteca de Python de código abierto que facilita la creación de hermosas aplicaciones web personalizadas para el machine learning y la ciencia de datos.
+FilterFaceApp es una WebApp de vision artificial en tiempo real desarrollada en [ Streamlit ](https://streamlit.io/) y montada en [Heroku](https://dashboard.heroku.com/apps) con el objetivo crear tus propios filtros personalizados, estos pueden ser aplicados directamente a todo el video o espeficiamente a caras detectadas.
+
+Streamlit es un excelente framework para científicos de datos, investigadores y desarrolladores de aprendizaje automático, y streamlit-webrtc lo amplía para poder manejar transmisiones de video (y audio) en tiempo real.
+
+Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
 
 ![Logo Streamlit](streamlit3.png)
 
 
+## 2. Uso en entorno local
 
-## 2. Resumen del proyecto
+Para el uso en entorno local de FilterFaceApp se requiere tener instalado una version de igual o superior a Python 3.8 , se recomienda tener instalado el IDE **Visual Studio Code** y **git** . Se requiere instalar las siguientes librerias.
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+* streamlit == 1.5.1
+* numpy == 1.22.2
+* streamlit-webrtc == 0.35.0
+* opencv-contrib-python-headless == 4.5.5.62
+* av == 8.1.0
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
+Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este proyecto usamos virtualenv y detallaremos como realizarlo.
+
+1. Abrir cmd con permisos de administrador.
+
+![Logo Streamlit](cmd0.png)
+
+2. Ingresa a la ruta donde estara el proyecto.
+
+![Logo Streamlit](cmd1.png)
+
+3. Añadir los siguientes comandos :
+ 
+    * ```python -m venv nombre_de_mi_entorno```
+    * ```.\nombre_de_mi_entorno\Scripts\activate```
+    * ```git init```
+    * ```git clone https://github.com/edwinml148/FilterFaceApp.git```
+
+![Logo Streamlit](cmd3.png)
+
+4. Mover los archivos de la carpeta clonada al directorio principal del proyecto.
+
+![Logo Streamlit](cmd4.png)
+
+5. Instalar las librerias con el comando ```pip install -r requirements.txt```
+
+![Logo Streamlit](cmd5.png)
+
+6. Ahora si podemos usar nuestra WebApp en entorno local con el comando ```streamlit run FilterFaceApp.py``` , se abrira una ventana en el navegador con el localhost.
+
+![Logo Streamlit](cmd6.png)
+![Logo Streamlit](cmd7.png)
+
 
 ## 3. Objetivos de aprendizaje
 

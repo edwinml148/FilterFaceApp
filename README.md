@@ -37,11 +37,11 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 1. Abrir cmd con permisos de administrador.
 
-![Logo Streamlit](cmd0.png)
+![cmd0](cmd0.png)
 
 2. Ingresa a la ruta donde estara el proyecto.
 
-![Logo Streamlit](cmd1.png)
+![cmd1](cmd1.png)
 
 3. Añadir los siguientes comandos :
  
@@ -50,20 +50,20 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
     * ```git init```
     * ```git clone https://github.com/edwinml148/FilterFaceApp.git```
 
-![Logo Streamlit](cmd3.png)
+![cmd3](cmd3.png)
 
 4. Mover los archivos de la carpeta clonada al directorio principal del proyecto.
 
-![Logo Streamlit](cmd4.png)
+![cmd4](cmd4.png)
 
 5. Instalar las librerias con el comando ```pip install -r requirements.txt```
 
-![Logo Streamlit](cmd5.png)
+![cmd5](cmd5.png)
 
 6. Ahora si podemos usar nuestra WebApp en entorno local con el comando ```streamlit run FilterFaceApp.py``` , se abrira una ventana en el navegador con el localhost.
 
-![Logo Streamlit](cmd6.png)
-![Logo Streamlit](cmd7.png)
+![cmd6](cmd6.png)
+![cmd7](cmd7.png)
 
 
 ## 3. Objetivos de aprendizaje

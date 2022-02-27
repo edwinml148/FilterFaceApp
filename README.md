@@ -4,8 +4,8 @@
 
 * [1. Motivacion](#1-Motivacion)
 * [2. Uso en entorno local](#2-Instalacion)
-* [3. Filtros perzonalizados](#3-Filtros-perzonalizados)
-* [4. Creacion de filtros](#4-creacion-de-filtros)
+* [3. Deteccion de rostros](#3-Filtros-perzonalizados)
+* [4. Filtros personalizados](#4-creacion-de-filtros)
 * [5. Deploy Heroku](#5-Deploy-Heroku)
 
 
@@ -20,9 +20,13 @@ Streamlit es un excelente framework para científicos de datos, investigadores y
 
 Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
 
+<div style="text-align: center;">
+  <br><br/>
+  <img src="FilterFaceApp.gif">
+  <br><br/>
+</div>
 
-[![SC2 Video](FilterFaceApp.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
-
+***
 
 ## 2. Uso en entorno local
 
@@ -38,11 +42,23 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 1. Abrir cmd con permisos de administrador.
 
-![cmd0](cmd0.png)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd0.png">
+  <br><br/>
+</div>
+
+
 
 2. Ingresa a la ruta donde estara el proyecto.
 
-![cmd1](cmd1.PNG)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd1.PNG">
+  <br><br/>
+</div>
+
+
 
 3. Añadir los siguientes comandos :
  
@@ -51,318 +67,123 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
     * ```git init```
     * ```git clone https://github.com/edwinml148/FilterFaceApp.git```
 
-![cmd3](cmd3.PNG)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd3.PNG">
+  <br><br/>
+</div>
 
 4. Mover los archivos de la carpeta clonada al directorio principal del proyecto.
 
-![cmd4](cmd4.PNG)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd4.PNG">
+  <br><br/>
+</div>
+
+
 
 5. Instalar las librerias con el comando ```pip install -r requirements.txt```
 
-![cmd5](cmd5.PNG)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd5.PNG">
+  <br><br/>
+</div>
 
 6. Ahora si podemos usar nuestra WebApp en entorno local con el comando ```streamlit run FilterFaceApp.py``` , se abrira una ventana en el navegador con el localhost.
 
-![cmd6](cmd6.PNG)
-![cmd7](cmd7.PNG)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="cmd6.PNG">
+  <br><br/>
+  <img src="cmd7.PNG">
+  <br><br/>
+</div>
 
-
-## 4. Creacion de filtros
-
-FilterFaceApp detecta rostros en video-stream en tiempo real basado en un algortimo de rapida deteccion de objetos usando *Boostend Cascade Of Simple Feature*. dicho algortimo introduce el concepto de *imagen integral* es cual hace que se mas rapido que propuestas anteriores. Podras encontrar mayor informacion en el siguiente paper https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf
-
-
-FilterFaceApp detecta rostros en video-stream en tiempo real usando dos algortimos, El primero es un clasificador pre-entrenado de Haar Cascades y el segundo es la deteccion de objetos a multiples escalas ( detectMultiScale ).
-
-EL clasificador Haar Cascades es un enfoque de machine learning para la deteccion visual de objetos que es capaz de procesar imagenes extramadamente rapido , gracias que combina los conceptos de imagenes integral y un algortimo de aprendizaje de AdaBoost.
-
-DetectMultiScale, 
-
-<!DOCTYPE html>
-<html>
-<body>
-<div align=”center”> 
-  <video width="320" height="240" controls>
-    <source src="FilterFaceApp.mp4" type="video/mp4">
-  </video>
-</div> 
-</body>
-</html>
-
-
-[![SC2 Video](elena.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
-
-### HTML y CSS
-
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-
-### DOM
-
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
-
-### JavaScript
-
-* [ ] Manipulación de strings.
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Declaración correcta de variables (const & let)
-
-### Testing
-
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
-
-### Estructura del código y guía de estilo
-
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
-
-### Git y GitHub
-
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-
-### UX
-
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-
-## 4. Consideraciones generales
-
-* El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
-  sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
-  te preocupes, lo aprenderás durante este proyecto.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Usa solo caracteres numéricos (dígitos) en la tarjeta a validar [0-9].
-
-### Definición del producto
-
-En el `README.md`, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
-### Interfaz de usuario (UI)
-
-La interfaz debe permitir al usuario:
-
-* Insertar el número que queremos validar.
-* Ver el resultado si es válido o no.
-* Ocultar todos los dígitos de su número de tarjeta menos los últimos
-4 caracteres.
-* No debe poder ingresar un campo vacío.
-
-### UX (Diseño de experiencia de usuario)
-
-Antes de iniciar a codear, debes entender el problema que quieres solucionar y
-cómo tu aplicación lo soluciona.
-
-* Trabaja tu primer prototipo con papel y lápiz (blanco y negro).
-* Luego valida esta solución con una compañera (pedir feedback).
-* Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un
-  nuevo prototipo usando alguna herramienta para diseño de prototipos
-  ([Balsamiq](https://balsamiq.com/), [Figma](https://www.figma.com/),
-  [Google Slides](https://www.google.com/intl/es/slides/about/), etc.)
-Estos puntos los presentarás en el `README.md`.
-
-### Scripts / Archivos
-
-#### General
-
-##### `README.md`
-
-Debe contener lo siguiente:
-
-* Un título con el nombre de tu proyecto.
-* Explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción.
-* Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-* La imagen final de tu proyecto.
-* Investigación UX:
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
-  2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  5. Imagen del prototipo final.
-
-#### Visualmente (HTML y CSS)
-
-Deberás maquetar de forma exacta el prototipo final que hiciste en la herramienta
-de diseño de prototipos que escogiste utilizando HTML y CSS. En este momento elegirás
-los colores, tipo de fuente, etc a usar.
-
-A continuación describimos los archivos que utilizarás:
-
-##### `src/index.html`
-
-En este archivo va el contenido que se mostrará al usuario (esqueleto HTML).
-Encontrarás 3 etiquetas iniciales, las cuales si deseas puedes borrar y empezar
-de cero:
-
-* `<header>`: encabezado de tu proyecto.
-* `<main>`: contenido principal de tu proyecto.
-* `<footer>`: pie de página de tu proyecto.
-
-##### `src/style.css`
-
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus
-propias reglas, por eso NO está permitido el uso de frameworks de CSS
-(Bootstrap, materialize, etc).
-
-#### Funcionalmente (JavaScript - pruebas unitarias)
-
-* La lógica del proyecto debe estar implementada completamente en JavaScript.
-* En este proyecto NO está permitido usar librerías o frameworks, sólo JavaScript
-puro también conocido como Vanilla JavaScript.
-* No se debe utilizar la _pseudo-variable_ `this`.
-
-Vas a tener 2 archivos JavaScript separando responsabilidades, a continuación
-indicamos qué harás en cada archivo:
-
-##### `src/validator.js`
-
-Acá escribirás las funciones necesarias para que el usuario pueda verificar la
-tarjeta de crédito y ocultar los dígitos de su número de tarjeta.
-Esta función debe ser pura e independiente del DOM.
-
-Para esto debes implementar el **objeto `validator`**, el cual ya se encuentra
-_exportado_ en el _boilerplate_. Este objeto (`validator`) contiene
-dos métodos (`isValid` y `maskify`):
-
-* **`validator.isValid(creditCardNumber)`**: `creditCardNumber` es un `string`
-con el número de tarjeta que se va a verificar. Esta función debe retornar un
-`boolean` dependiendo si es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).
-
-* **`validator.maskify(creditCardNumber)`**: `creditCardNumber` es un `string` con
-el número de tarjeta y esta función debe retornar un `string` donde todos menos
-los últimos cuatro caracteres sean reemplazados por un numeral (`#`) o 🐱.
-Esta función deberá siempre mantener los últimos cuatro caracteres intactos, aún
-cuando el `string` sea de menor longitud.
-
-    Ejemplo de uso
-
-    ```js
-    maskify('4556364607935616') === '############5616'
-    maskify(     '64607935616') ===      '#######5616'
-    maskify(               '1') ===                '1'
-    maskify(               '')  ===                ''
-    ```
-
-##### `src/index.js`
-
-Acá escribirás todo el código que tenga que ver con la interacción del DOM
-(seleccionar, actualizar y manipular elementos del DOM y eventos).
-Es decir, en este archivo deberás invocar las funciones `isValid` y `maskify`
-según sea necesario para actualizar el resultado en la pantalla (UI).
-
-##### `test/validator.spec.js`
-
-En este archivo tendrás que completar las pruebas unitarias de las funciones
-`validator.isValid(creditCardNumber)` y `validator.maskify(creditCardNumber)`
-implementadas en `validator.js` utilizando [Jest](https://jestjs.io/es-ES/).
-Tus pruebas unitarias deben dar un 70% en _coverage_ (cobertura),
-_statements_ (sentencias), _functions_ (funciones) y _lines_ (líneas); y un
-mínimo del 50% de _branches_ (ramas).
 
 ***
 
-## 6. Pistas, tips y lecturas complementarias
+## 3. Deteccion de rostros
 
-### Primeros pasos
+FilterFaceApp detecta rostros en video-stream en tiempo real usando dos algortimos, El primero es un clasificador pre-entrenado de Haar Cascades y el segundo es la deteccion de objetos a multiples escalas ( detectMultiScale ).
 
-1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
-  condiciones, algo como [Atom](https://atom.io/) o
-  [Code](https://code.visualstudio.com/).
-2. Para ejecutar los comandos a continuación necesitarás una :shell:
-  [UNIX Shell](https://github.com/Laboratoria/bootcamp/tree/master/topics/shell),
-  que es un programita que interpreta líneas de comando (command-line
-  interpreter) así como tener [git](https://github.com/Laboratoria/bootcamp/tree/master/topics/scm/01-git)
-  instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
-  ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
-  también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
-  que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows 10
-  o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-  [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-  tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-  en ese repo. La otra integrante del equipo deber hacer un fork **del
-  repositorio de su compañera** y
-  [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-  hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-  tu _fork_ a tu computadora (copia local).
-5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-  asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-  pruebas unitarias (unit tests) con el comando `npm test`.
-7. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-8. A codear se ha dicho! :rocket:
 
-### Recursos y temas relacionados
+EL clasificador Haar Cascades es un enfoque de machine learning para la deteccion visual de objetos que es capaz de procesar imagenes extramadamente rapido , gracias que combina los conceptos de imagenes integral y un algortimo de aprendizaje de AdaBoost.Podras encontrar mayor informacion en el siguiente paper https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf.
 
-A continuación un video de Michelle que te lleva a través del algoritmo de Luhn
-y un par de cosas más que debes saber para resolver este proyecto. ¡Escúchala
-con detenimiento y sigue sus consejos! :)
+En este proyecto usaremos los modelos pre-entrenados de *haarcascade_frontalface_default.xml* ( Entrenado con imagenes frontales de caras ) y *haarcascade_eye.xml* ( Entrenado con imagenes de ojos )
 
-[![tips credit card](https://img.youtube.com/vi/f0zL6Ot9y_w/0.jpg)](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
+<div style="text-align: center;">
+  <br><br/>
+  <img src="hola.PNG">
+  <br><br/>
+</div>
 
-[Link](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
+DetectMultiScale, es un algortimo que realiza una busqueda de caras realizando un varios barridos de la imagen con ventanas de diferentes tamaños (ya que puede haber caras grandes cercanas o pequeñas que estén más lejanas).
 
-También una metodología para empezar a desarrollar tareas con JavaScript:
+<div style="text-align: center;">
+  <br><br/>
+  <img src="elena.gif">
+  <br><br/>
+</div>
 
-[![Resolución de problemas con JavaScript](http://i3.ytimg.com/vi/lYfEmhLmu7A/hqdefault.jpg)](https://www.youtube.com/watch?v=lYfEmhLmu7A)
 
-[Link](https://www.youtube.com/watch?v=lYfEmhLmu7A)
+```detectMultiScale(img, scaleFactor, minNeighbors, minSize, maxSize )```.
 
-Terminal y shell de UNIX:
+* *img* : Es una imagene en escala de grises en donde va a actuar el detector de rostros.
+* *ScaleFactor* : Este parametro especifica que tanto va aumentar o reducir el tamaño de la imagen original
+* *minNeighbors* : Especifica el numero minimo de cuadrados delimitadores o vecinos que debe tener el rostro para que sea detectado como tal.
+* *Minsize* : El tamaño minimo del cuadro delimitador.
+* *Maxsize* : El tamaño maximo del cuadrado delimitador.  
 
-[![Playlist de Terminal y shell de UNIX](https://img.youtube.com/vi/GB35Eyb-J4c/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
+***
 
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
+## 4. Filtros personalizados
 
-Control de versiones y trabajo colaborativo con Git y GitHub:
+Para la deteccion de rostros se convierte la imagen color a escala de grises ```gray = cv2.cvtColor(img , cv2.COLOR_BGR2GRAY)``` luego se aplica ```detectMultiScale(img, scaleFactor, minNeighbors, minSize, maxSize )```. El cual nos da como resultado la posicion en fila , columna , largo y ancho de los cuadros delimitadores de todos los rostros detectados.
 
-[![Playlist de control de versiones y trabajo colaborativo](https://img.youtube.com/vi/F1EoBbvhaqU/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
+La variable ```threshold1``` controla el valor de ```minSize``` y ```maxSize```. Estos parametros nos permite controlar el tamaño del cuadro delimitador de los rostros . A mayor valor de ```threshold1``` se detectara rostros mas cerca de la camara. A menor valor , se detectara rostros mas lejos de la camara. 
 
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
+### 4.1 Deteccion de rostros y ojos
 
-Diseño de experiencia de usuario (User Experience Design):
+Luego de aplicar la logica de deteccion de rostros , en la variable ```gray_cara``` se toma un recorte de la imagen de entrada donde se detecto los rostros. En este recorte se realiza la deteccion de los ojos, se dibuja el cuadrado delimitador bajo la condicion de deteccion de 2 ojos.
 
-* Ideación
-* Prototipado (sketching)
-* Testeo e Iteración
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filter1.PNG">
+  <br><br/>
+  <img src="filtro_deteccionderostroojos.PNG">
+  <br><br/>
+</div>
 
-Desarrollo Front-end:
+### 4.2 Blurring
 
-* Valores
-* Tipos
-* Variables
-* Control de flujo
-* Tests unitarios
-* [Documentación de NPM](https://docs.npmjs.com/)
+Luego de aplicar la logica de deteccion de rostros , se aplica un filtro de suavizado de media, el cual se realiza mediante una operacion de convolucion entre la imagen de entrada y un matriz o kernel de tamaño regulable. 
 
-Organización del Trabajo:
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filter2.PNG">
+  <br><br/>
+  <img src="filtro_blurring.PNG">
+  <br><br/>
+</div>
 
-* [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
-* [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
-  esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
-  poco a lo largo del -_bootcamp_.
-* [Blog: cómo funciona el algoritmo de Luhn](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-para-generar-numeros-de-tarjetas-de-credito.html).
+### 4.3 Reemplaza cara por imagen
+
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filter3.PNG">
+  <br><br/>
+  <img src="filtro_reemplazarface.PNG">
+  <br><br/>
+</div>
+
+***
+
+## 5. Creacion de filtros
+
+
+***
+
+
+## 6. Deploy

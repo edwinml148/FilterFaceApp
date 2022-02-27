@@ -22,7 +22,7 @@ Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="FilterFaceApp.gif">
+  <img src="multimedia/FilterFaceApp.gif">
   <br><br/>
 </div>
 
@@ -46,7 +46,7 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd0.png">
+  <img src="multimedia/cmd0.png">
   <br><br/>
 </div>
 
@@ -56,7 +56,7 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd1.PNG">
+  <img src="multimedia/cmd1.PNG">
   <br><br/>
 </div>
 
@@ -71,7 +71,7 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd3.PNG">
+  <img src="multimedia/cmd3.PNG">
   <br><br/>
 </div>
 
@@ -79,7 +79,7 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd4.PNG">
+  <img src="multimedia/cmd4.PNG">
   <br><br/>
 </div>
 
@@ -89,7 +89,7 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd5.PNG">
+  <img src="multimedia/cmd5.PNG">
   <br><br/>
 </div>
 
@@ -97,9 +97,9 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="cmd6.PNG">
+  <img src="multimedia/cmd6.PNG">
   <br><br/>
-  <img src="cmd7.PNG">
+  <img src="multimedia/cmd7.PNG">
   <br><br/>
 </div>
 
@@ -117,7 +117,7 @@ En este proyecto usaremos los modelos pre-entrenados de *haarcascade_frontalface
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="hola.png">
+  <img src="multimedia/hola.png">
   <br><br/>
 </div>
 
@@ -125,7 +125,7 @@ DetectMultiScale, es un algortimo que realiza una busqueda de caras realizando u
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="elena.gif">
+  <img src="multimedia/elena.gif">
   <br><br/>
 </div>
 
@@ -152,9 +152,9 @@ Luego de aplicar la logica de deteccion de rostros , en la variable ```gray_cara
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filter1.PNG">
+  <img src="multimedia/filter1.PNG">
   <br><br/>
-  <img src="filtro_deteccionderostroojos.PNG">
+  <img src="multimedia/filtro_deteccionderostroojos.PNG">
   <br><br/>
 </div>
 
@@ -164,9 +164,9 @@ Luego de aplicar la logica de deteccion de rostros , se aplica un filtro de suav
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filter2.PNG">
+  <img src="multimedia/filter2.PNG">
   <br><br/>
-  <img src="filtro_blurring.PNG">
+  <img src="multimedia/filtro_blurring.PNG">
   <br><br/>
 </div>
 
@@ -176,9 +176,9 @@ Para este filtro se debe añadir una imagen en formato .jpg , el cual se usara p
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filter3.PNG">
+  <img src="multimedia/filter3.PNG">
   <br><br/>
-  <img src="filtro_reemplazarface.PNG">
+  <img src="multimedia/filtro_reemplazarface.PNG">
   <br><br/>
 </div>
 
@@ -190,7 +190,7 @@ Antes de explicar como crear e incorporar nuevos filtros , veamos la estructura 
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filtro_creacion.PNG">
+  <img src="multimedia/filtro_creacion.PNG">
   <br><br/>
 </div>
 
@@ -198,7 +198,7 @@ Ahora si veamos que debemos adicionar al codigo para crear nuestro propio filtro
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filtro_creacion_1.PNG">
+  <img src="multimedia/filtro_creacion_1.PNG">
   <br><br/>
 </div>
 
@@ -206,7 +206,7 @@ Para diseñar un nuevo filtro se debe agregar una nueva clase, dentro de esta se
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="filtro_creacion_2.PNG">
+  <img src="multimedia/filtro_creacion_2.PNG">
   <br><br/>
 </div>
 

@@ -26,8 +26,6 @@ Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
   <br><br/>
 </div>
 
-
-
 ***
 
 ## 2. Uso en entorno local

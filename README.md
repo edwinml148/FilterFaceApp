@@ -26,6 +26,8 @@ Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
   <br><br/>
 </div>
 
+
+
 ***
 
 ## 2. Uso en entorno local
@@ -115,7 +117,7 @@ En este proyecto usaremos los modelos pre-entrenados de *haarcascade_frontalface
 
 <div style="text-align: center;">
   <br><br/>
-  <img src="hola.PNG">
+  <img src="hola.png">
   <br><br/>
 </div>
 

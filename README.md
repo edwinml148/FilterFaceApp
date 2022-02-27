@@ -172,6 +172,8 @@ Luego de aplicar la logica de deteccion de rostros , se aplica un filtro de suav
 
 ### 4.3 Reemplaza cara por imagen
 
+Para este filtro se debe añadir una imagen en formato .jpg , el cual se usara para reemplazar los rostros por esta imagen. Para poder aplicar este reemplazo debemos reescalar el tamaño de esta imagen. 
+
 <div style="text-align: center;">
   <br><br/>
   <img src="filter3.PNG">
@@ -184,6 +186,31 @@ Luego de aplicar la logica de deteccion de rostros , se aplica un filtro de suav
 
 ## 5. Creacion de filtros
 
+Antes de explicar como crear e incorporar nuevos filtros , veamos la estructura del codigo fuente. En la parte superior donde estan las clases va la logica de cada filtro , en la variable ```option``` se almacena la seleccion del box y el valor cambiara dependiendo el tipo del filtro. Con esta eleccion el codigo ingresa al if seleccionado.
+
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filtro_creacion.PNG">
+  <br><br/>
+</div>
+
+Ahora si veamos que debemos adicionar al codigo para crear nuestro propio filtro.
+
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filtro_creacion_1.PNG">
+  <br><br/>
+</div>
+
+Para diseñar un nuevo filtro se debe agregar una nueva clase, dentro de esta se estable la logica de deteccion de rostros. Luego  se realiza un recorte de la imagen ```img[y:y+h,x:x+w]``` apartir de aqui se puede aplicar tecnicas de procesamiento de imagenes como variacion de contraste , brillo , correccion gamma , filtro de suavizado , filtro de diferencia entre otros.
+
+<div style="text-align: center;">
+  <br><br/>
+  <img src="filtro_creacion_2.PNG">
+  <br><br/>
+</div>
+
+Por ultimo debemos añadir un nuevo elemento en la tupla de opciones, seguido de estos incorporar un nuevo ```if``` con el nombre de la opcion incorporada. 
 
 ***
 

@@ -128,7 +128,7 @@ def main():
                 ctx.video_processor.imagen = opencv_image
 
             st.write('*Minimo tamaño de la cara* : Indica la longitud en pixels minima de la cara detectada , a menor valor se podra detectar rostros mas lejos de la camara')
-    
+
 
 if __name__ == '__main__':
     main()

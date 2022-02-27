@@ -214,5 +214,3 @@ Por ultimo debemos añadir un nuevo elemento en la tupla de opciones, seguido de
 
 ***
 
-
-## 6. Deploy

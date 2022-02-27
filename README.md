@@ -20,7 +20,8 @@ Streamlit es un excelente framework para científicos de datos, investigadores y
 
 Puedes probarlo aqui : https://filterfaceapp.herokuapp.com/
 
-![Logo Streamlit](streamlit3.png)
+
+[![SC2 Video](FilterFaceApp.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
 
 
 ## 2. Uso en entorno local
@@ -71,11 +72,23 @@ Se recomienda el uso de un entorno virtual usando virtualenv o anaconda. En este
 FilterFaceApp detecta rostros en video-stream en tiempo real basado en un algortimo de rapida deteccion de objetos usando *Boostend Cascade Of Simple Feature*. dicho algortimo introduce el concepto de *imagen integral* es cual hace que se mas rapido que propuestas anteriores. Podras encontrar mayor informacion en el siguiente paper https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf
 
 
-FilterFaceApp detecta rostros en video-stream en tiempo real usando dos algortimos, clasificador pre-entrenado de Haar Cascades y la deteccion de objetos a multiples escalas ( detectMultiScale ).
+FilterFaceApp detecta rostros en video-stream en tiempo real usando dos algortimos, El primero es un clasificador pre-entrenado de Haar Cascades y el segundo es la deteccion de objetos a multiples escalas ( detectMultiScale ).
 
 EL clasificador Haar Cascades es un enfoque de machine learning para la deteccion visual de objetos que es capaz de procesar imagenes extramadamente rapido , gracias que combina los conceptos de imagenes integral y un algortimo de aprendizaje de AdaBoost.
 
 DetectMultiScale, 
+
+<!DOCTYPE html>
+<html>
+<body>
+<div align=”center”> 
+  <video width="320" height="240" controls>
+    <source src="FilterFaceApp.mp4" type="video/mp4">
+  </video>
+</div> 
+</body>
+</html>
+
 
 [![SC2 Video](elena.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
 

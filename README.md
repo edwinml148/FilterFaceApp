@@ -3,10 +3,10 @@
 ## Índice
 
 * [1. Motivacion](#1-Motivacion)
-* [2. Uso en entorno local](#2-Instalacion)
-* [3. Deteccion de rostros](#3-Filtros-perzonalizados)
-* [4. Filtros personalizados](#4-creacion-de-filtros)
-* [5. Deploy Heroku](#5-Deploy-Heroku)
+* [2. Uso en entorno local](#2-Uso-en-entorno-local)
+* [3. Deteccion de rostros](#3-Deteccion-de-rostros)
+* [4. Filtros personalizados](#4-Filtros-personalizados)
+* [5. Creacion de filtros](#5-Creacion-de-filtros)
 
 
 ***
